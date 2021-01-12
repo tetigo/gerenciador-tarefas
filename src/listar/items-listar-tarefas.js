@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { A } from 'hookrouter'
 import { Button } from 'react-bootstrap'
+import ConcluirTarefa from './concluir-tarefa'
 
 function ItemsListarTarefas(props) {
     function marcarConcluido(tarefa) {
@@ -17,6 +18,9 @@ function ItemsListarTarefas(props) {
                         style={{ textDecoration: marcarConcluido(tarefa) }}>
                         {tarefa.nome}
                     </td>
+                    <td>
+                        <ConcluirTarefa tarefa={tarefa.id} recargaTarefas={props.recarregarTarefas} />
+                    </td>
                     <td className="text-right">
                         <A href={`/atualizar/${tarefa.id}`} className={tarefa.concluida ? 'hidden' : 'btn btn-warning btn-sm'}>
                             <FontAwesomeIcon icon={faEdit} />
@@ -28,9 +32,5 @@ function ItemsListarTarefas(props) {
     )
 }
 
-ItemsListarTarefas.propTypes = {
-    tarefas: propTypes.array,
-    recarregarTarefas: propTypes.func,
-}
 
 export default ItemsListarTarefas
