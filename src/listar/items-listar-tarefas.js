@@ -1,8 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { A } from 'hookrouter'
+import { Button } from 'react-bootstrap'
 
 function ItemsListarTarefas(props) {
     function marcarConcluido(tarefa) {
@@ -27,9 +28,9 @@ function ItemsListarTarefas(props) {
     )
 }
 
-ItemsListarTarefas.PropTypes = {
-    tarefas: PropTypes.array.isRequired,
-    recarregarTarefas: PropTypes.func.isRequired,
+ItemsListarTarefas.propTypes = {
+    tarefas: propTypes.array,
+    recarregarTarefas: propTypes.func,
 }
 
 export default ItemsListarTarefas
