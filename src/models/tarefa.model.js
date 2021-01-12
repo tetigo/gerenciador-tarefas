@@ -1,3 +1,4 @@
+/* eslint-disable */
 function Tarefa(id, nome, concluida) {
 
     this.id = id,
