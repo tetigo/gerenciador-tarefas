@@ -32,8 +32,8 @@ function ConcluirTarefa(props) {
     }
 
     return (
-        <span className={props.className}>
-            <Button className="btn-sm" onClick={handleAbrirModal}
+        <span>
+            <Button variant="info" className="bnt-sm" onClick={handleAbrirModal}
                 data-testid="btn-abrir-modal">
                 <FontAwesomeIcon icon={faClipboardCheck} />
             </Button>
@@ -42,7 +42,7 @@ function ConcluirTarefa(props) {
                     <Modal.Title>Concluir Tarefa</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    Deseja realmente concluir a seguinte tarefa?${props.recargaTarefas()}
+                    Deseja realmente concluir a seguinte tarefa?
                     <br></br>
                     <strong>{props.tarefa.nome}</strong>
                 </Modal.Body>

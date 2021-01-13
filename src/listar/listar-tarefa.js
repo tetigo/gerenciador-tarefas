@@ -34,11 +34,9 @@ function ListarTarefa() {
                             <A href="/cadastrar"
                                 className="btn btn-success btn-sm"
                                 data-testid="btn-nova-tarefa">
-                                <div style={{ alignItems: "center" }}>
-                                    <FontAwesomeIcon icon={faPlus} />
+                                <FontAwesomeIcon icon={faPlus} />
                                     &nbsp;
                                     Nova Tarefa
-                                </div>
                             </A>
                         </th>
                     </tr>
